@@ -1,5 +1,6 @@
 import os
 from typing import Optional, Dict, Any
+from .database import init_database_in_app
 
 from flask import Flask
 
@@ -20,5 +21,7 @@ def create_app(test_config: Optional[Dict[Any, Any]] = None) -> Flask:
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
+
+    init_database_in_app(app)
 
     return app
