@@ -1,11 +1,33 @@
-{% extends "bootstrap/base.html" %}
+{%- extends "base.html" %}
 
-{% block head %}
-<link href="{{ url_for('static', filename='css/homepage.css') }}" rel="stylesheet">
-{% endblock head %}
+{% block app_content %}
 
-{% block content %}
-<h1>
-    WRITE SOMETHING
-</h1>
-{% endblock content %}
+<div class="container">
+    <div class="row horizontal">
+        <div class="col-md-6 col-border">
+             <img src="/static/zdjecie_paszport_ready.png" alt="My photography" width="150" height="192">
+        </div>
+        <div class="col-md-6 col-border vertical">
+            <div class="row horizontal">
+                {% for socialpage in socialpages %}
+                <div class ="col-md-4">
+                    <a class="alink" href="{{ socialpage.link }}">
+                        <i class="fa fa-{{ socialpage.icon }} fa-5x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-border">
+            icon-camera-retro
+        </div>
+        <div class="col-md-6 col-border">
+            D
+        </div>
+    </div>
+</div>
+
+{%- endblock %}
