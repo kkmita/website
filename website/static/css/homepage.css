@@ -1,47 +1,5 @@
-html,
+/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  height: 100%;
-  width: 100%;
-  background-color: #333;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
-
-body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-}
-
-.col-border {
-  top: 0;
-  bottom: 0;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
-}
-
-
-div.row {
-    border: 1px solid red;
-} /*    border-bottom: 0px;
-}
-*/
-
-div.horizontal {
-    display: flex;
-    justify-content: center;
-/*    margin-bottom: 15px; */
-}
-
-div.vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-/*    margin-right: 15px; */
-}
-
-
-a:hover{color: red}
-
-.alink {
-   color: white;
-}
-
