@@ -11,6 +11,7 @@ click = "*"
 typing = "*"
 flask-bootstrap = "*"
 python-dotenv = "*"
+attrs = "*"
 
 [requires]
 python_version = "3.6"

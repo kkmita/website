@@ -6,22 +6,29 @@
       <div class="container container-nav">
         <nav class="blog-nav col-md-3">
             {% for tab in website_tabs %}
+            {% if tab.left %}
           <a class="blog-nav-item {{ tab.active }}" href="{{ url_for(''+tab.href) }}"> {{ tab.name }} </a>
           <!--<a class="blog-nav-item active" href="#">Home</a>
           <a class="blog-nav-item" href="#">New features</a>-->
+            {% endif %}
             {% endfor %}
         </nav>
           <div class="col-md-5"></div>
         <nav class="blog-nav col-md-4">
-          <a class="blog-nav-item" href="#">Press</a>
+            {% for tab in website_tabs %}
+            {% if not tab.left %}
+            <a class="blog-nav-item {{ tab.active }}" href="{{ url_for(''+tab.href) }}"> {{ tab.name }}</a>
+          <!--<a class="blog-nav-item" href="#">Press</a>
           <a class="blog-nav-item" href="#">New hires</a>
-          <a class="blog-nav-item" href="#">About</a>
+          <a class="blog-nav-item" href="#">About</a>-->
+            {% endif %}
+            {% endfor %}
         </nav>
       </div>
     </div>
 
     <div class="container">
-        <h1>Hello, projects!</h1>
+        <h1>Hello, {{ fname }}</h1>
     </div>
 
 {% endblock %}

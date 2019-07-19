@@ -1,9 +1,9 @@
 from typing import Optional, Dict, Any
 
-from flask import Flask, render_template
+from flask import Flask
 from flask_bootstrap import Bootstrap
 
-from frontend import frontend
+from .frontend import frontend
 
 
 def create_app(test_config: Optional[Dict[Any, Any]] = None) -> Flask:
