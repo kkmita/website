@@ -56,24 +56,31 @@
         <div class="blog-masthead">
       <div class="container container-nav">
         <nav class="blog-nav col-md-3">
+
             {% for tab in website_tabs %}
-            {% if tab.left %}
+            {% if tab.left and not tab.social %}
+
           <a class="blog-nav-item {{ tab.active }}" href="{{ url_for(''+tab.href) }}"> {{ tab.name }} </a>
-          <!--<a class="blog-nav-item active" href="#">Home</a>
-          <a class="blog-nav-item" href="#">New features</a>-->
+            {% elif tab.left and tab.social %}
+
+          <a class="alink" href="{{ tab.href }}" style="font-size: 24px">
+              <i class="fa fa-{{ tab.icon }}"></i>
+          </a>
             {% endif %}
             {% endfor %}
+
         </nav>
           <div class="col-md-5"></div>
         <nav class="blog-nav col-md-4">
+
             {% for tab in website_tabs %}
             {% if not tab.left %}
+
             <a class="blog-nav-item {{ tab.active }}" href="{{ url_for(''+tab.href) }}"> {{ tab.name }}</a>
-          <!--<a class="blog-nav-item" href="#">Press</a>
-          <a class="blog-nav-item" href="#">New hires</a>
-          <a class="blog-nav-item" href="#">About</a>-->
+
             {% endif %}
             {% endfor %}
+
         </nav>
       </div>
     </div>

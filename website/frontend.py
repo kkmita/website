@@ -7,10 +7,13 @@ from website.utils import set_active, caller_name
 frontend = Blueprint('frontend', __name__)
 
 website_tabs = [
-    {'name': 'Home', 'href': '.home', 'left': True, 'active': ''},
-    {'name': 'Projects', 'href': '.projects', 'left': False, 'active': ''},
-    {'name': 'Resume', 'href': '.resume', 'left': False, 'active': ''},
-    {'name': 'dscussions', 'href': '.dscussions', 'left': False, 'active': ''}
+    {'name': 'Home', 'href': '.home', 'left': True, 'active': '', 'icon': '', 'social': False},
+    {'name': '', 'href': 'https://www.linkedin.com/', 'left': True, 'active': '', 'icon': 'linkedin', 'social': True},
+    {'name': '', 'href': 'https://www.stackoverflow.com', 'left': True, 'active': '', 'icon': 'stack-overflow', 'social': True},
+    {'name': '', 'href': 'https://www.github.com/kkmita', 'left': True, 'active': '', 'icon': 'github', 'social': True},
+    {'name': 'Projects', 'href': '.projects', 'left': False, 'active': '', 'social': False},
+    {'name': 'Resume', 'href': '.resume', 'left': False, 'active': '', 'social': False},
+    {'name': 'dscussions', 'href': '.dscussions', 'left': False, 'active': '', 'social': False}
 ]
 
 

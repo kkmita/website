@@ -51,3 +51,23 @@
 nav > a {
   font-size: 140%;
 }
+
+.alink {
+   color: #cdddeb;
+   text-decoration: none !important; /* This important was the clue to resolve the issue with underscore!*/
+   padding-left: 12px;
+   hover: blue !important;
+}
+
+.alink:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.alink:focus {
+  color: #cdddeb;
+  text-decoration: none;
+  outline: none;
+}
+
+
